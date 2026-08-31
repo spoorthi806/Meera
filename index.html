@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,188 +9,107 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Background Effects -->
     <div class="stars"></div>
-
-    <!-- PAGE 1 -->
     <section class="page active">
-
         <div class="card">
-
             <div class="top-icon">🎂</div>
-
             <h1>Happy Birthday!</h1>
-
             <h2>To My Special Person ❤️</h2>
-
-            <!-- IMAGE OPTION -->
             <img src="photo-1.jpeg"
                  alt="Birthday Photo"
                  class="birthday-img">
-
             <p>
                 Today is not just another day...
                 It's the day someone wonderful was born! ✨
             </p>
-
             <button onclick="nextPage()">
                 Start the Surprise →
             </button>
-
         </div>
-
     </section>
-
-
-    <!-- PAGE 2 -->
     <section class="page">
-
         <div class="card">
-
             <span class="number">01</span>
-
             <h1>A Special Day ✨</h1>
-
-            <!-- IMAGE OPTION -->
             <img src="photo-2.jpeg"
                  alt="Special Photo"
                  class="birthday-img">
-
             <p>
                 May your birthday be filled with
                 beautiful moments, endless happiness,
                 and memories that stay forever. 💖
             </p>
-
             <div class="buttons">
                 <button onclick="prevPage()">← Back</button>
                 <button onclick="nextPage()">Next →</button>
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- PAGE 3 -->
     <section class="page">
-
         <div class="card">
-
             <span class="number">02</span>
-
             <h1>For You ❤️</h1>
-
-            <!-- IMAGE OPTION -->
             <img src="photo-3.jpeg"
                  alt="Beautiful Memory"
                  class="birthday-img">
-
             <p>
                 May every dream you have come true.
                 May every step you take lead you
                 towards something beautiful.
             </p>
-
             <p class="highlight">
                 Keep smiling. Keep shining. Keep being YOU! ✨
             </p>
-
             <div class="buttons">
                 <button onclick="prevPage()">← Back</button>
                 <button onclick="nextPage()">Next →</button>
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- PAGE 4 -->
     <section class="page">
-
         <div class="card final-card">
-
             <div class="cake">🎂</div>
-
             <h1>Once Again...</h1>
-
             <h2>HAPPY BIRTHDAY! 🎉</h2>
-
             <p>
                 Wishing you a year full of
                 happiness, success, love and laughter.
             </p>
-
             <p class="big-text">
                 May this year be your BEST YEAR EVER! ❤️
             </p>
-
             <div class="buttons">
                 <button onclick="prevPage()">← Back</button>
                 <button onclick="restart()">Replay ↻</button>
             </div>
-
         </div>
-
     </section>
-
-
     <script>
-
         let currentPage = 0;
-
         const pages = document.querySelectorAll(".page");
-
         function showPage(index) {
-
             pages.forEach(page => {
                 page.classList.remove("active");
             });
-
             pages[index].classList.add("active");
         }
-
-
         function nextPage() {
-
             if (currentPage < pages.length - 1) {
-
                 currentPage++;
-
                 showPage(currentPage);
-
             }
-
         }
-
-
         function prevPage() {
-
             if (currentPage > 0) {
-
                 currentPage--;
-
                 showPage(currentPage);
-
             }
-
         }
-
-
         function restart() {
-
             currentPage = 0;
-
             showPage(currentPage);
-
         }
-
     </script>
-
 </body>
 </html>
-```
