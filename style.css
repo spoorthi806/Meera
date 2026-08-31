@@ -1,0 +1,395 @@
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #ff7eb3, transparent 40%),
+        linear-gradient(135deg, #12001f, #2b0647, #090014);
+
+    color: white;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+
+}
+
+
+.page.active {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+
+    width: min(600px, 95%);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    text-align: center;
+
+    padding: 40px 30px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 0 30px rgba(255, 105, 180, 0.25),
+        0 0 80px rgba(170, 70, 255, 0.15);
+
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+
+    font-size: clamp(35px, 7vw, 65px);
+
+    margin-bottom: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #ff9dcc,
+        #fff
+    );
+
+
+}
+
+
+h2 {
+
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+    color: #ffd5eb;
+
+}
+
+
+p {
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #f8eaf3;
+
+    margin: 20px 0;
+
+}
+
+
+.highlight {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #ffb6dd;
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+.birthday-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto 10px;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.top-icon,
+.cake {
+
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.number {
+
+    display: inline-block;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    color: #ff9ed2;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    padding: 14px 28px;
+
+    margin: 10px 5px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(135deg, #ff4f9a, #9b4dff);
+
+    box-shadow:
+        0 8px 25px rgba(255, 70, 160, 0.35);
+
+    transition: 0.3s ease;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 12px 35px rgba(255, 70, 160, 0.55);
+
+}
+
+
+button:active {
+
+    transform: scale(0.96);
+
+}
+
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.buttons {
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   FINAL PAGE
+========================= */
+
+.final-card {
+
+    padding: 50px 30px;
+
+}
+
+
+.final-card h2 {
+
+    font-size: clamp(25px, 6vw, 42px);
+
+    color: #ffb0d9;
+
+}
+
+
+.big-text {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #fff;
+
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+.stars,
+.stars::before,
+.stars::after {
+
+    position: fixed;
+
+    width: 3px;
+
+    height: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    content: "";
+
+    z-index: -1;
+
+}
+
+
+.stars {
+
+    top: 15%;
+
+    left: 10%;
+
+    box-shadow:
+        100px 50px white,
+        200px 150px white,
+        350px 80px white,
+        500px 200px white,
+        650px 100px white,
+        800px 250px white,
+        950px 50px white,
+        1100px 180px white,
+        1200px 90px white,
+        300px 400px white,
+        700px 450px white,
+        1000px 500px white;
+
+    animation: twinkle 2s infinite alternate;
+
+}
+
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .card {
+
+        padding: 30px 20px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .birthday-img {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+    p {
+
+        font-size: 15px;
+
+    }
+
+
+    button {
+
+        padding: 12px 22px;
+
+        font-size: 14px;
+
+    }
+
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    box-sizing: border-box;
+}
+
+.card {
+    box-sizing: border-box;
+}
